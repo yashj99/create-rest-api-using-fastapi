@@ -29,8 +29,8 @@ def posts():
 
 @app.get("/classes")
 def get(db: Session = Depends(get_db)):
-    all_products = db.query(models.Class).all()
-    return all_products
+    all_classes = db.query(models.Class).all()
+    return all_classes
 
 # Endpoint to get total students for a given year
 @app.get("/total_students/{year}")
